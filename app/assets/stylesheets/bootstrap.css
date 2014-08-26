@@ -86,11 +86,9 @@ figcaption, h1, h2, h3, h4 {
 
 
 #blueprint {
+  background: url('/assets/marina_park_4.png') 50% 0 repeat fixed;
   margin: 0;
-  background: url('/assets/marina_park_4.png');
-
-  background-repeat:repeat;
-  display: compact;
+  position: relative;
 }
 
 

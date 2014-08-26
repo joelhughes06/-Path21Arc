@@ -20,6 +20,9 @@
   <script src="javascripts/modernizr.custom.97074.js"></script>
   <noscript><link rel="stylesheet" type="text/css" href="assets/noJS.css"/></noscript>
 
+  <script src="javascripts/parallax.js"></script>
+  <script src="javascripts/slider.js"></script>
+
   <style>
     body {
             padding-top: 0px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -62,60 +65,11 @@ $(function() {
 });
 </script>
 
-<!-- http://codepen.io/zuraizm/pen/vGDHl -->
-<script>
-jQuery(document).ready(function ($) {
-
-  $('#checkbox').change(function(){
-    setInterval(function () {
-        moveRight();
-    }, 3000);
-  });
-  
-  var slideCount = $('#slider ul li').length;
-  var slideWidth = $('#slider ul li').width();
-  var slideHeight = $('#slider ul li').height();
-  var sliderUlWidth = slideCount * slideWidth;
-  
-  $('#slider').css({ width: slideWidth, height: slideHeight });
-  
-  $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-  
-    $('#slider ul li:last-child').prependTo('#slider ul');
-
-    function moveLeft() {
-        $('#slider ul').animate({
-            left: + slideWidth
-        }, 200, function () {
-            $('#slider ul li:last-child').prependTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-
-    function moveRight() {
-        $('#slider ul').animate({
-            left: - slideWidth
-        }, 200, function () {
-            $('#slider ul li:first-child').appendTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-
-    $('a.control_prev').click(function () {
-        moveLeft();
-    });
-
-    $('a.control_next').click(function () {
-        moveRight();
-    });
-
-});    
-</script>  
-
 </head>
 
 
-<body id='blueprint'>
+<body id='blueprint' data-type='background' data-speed='10' class='pages'>
+<section>  
 <a name="top" class="smoothScroll">
 </a>
 <div class="row-fluid">
@@ -136,8 +90,8 @@ jQuery(document).ready(function ($) {
         <ul>
           <li><a href="#services" class="smoothScroll">SERVICES</a></li>
           <li><a href="#portfolio" class="smoothScroll">PORTFOLIO</a></li>
-          <li><a href="#team" class="smoothScroll">TEAM</a></li>
           <li><a href="#about" class="smoothScroll">ABOUT</a></li>
+          <li><a href="#team" class="smoothScroll">TEAM</a></li>
           <li><a href="/inquiries/new" class="smoothScroll">CONTACT</a></li>
           <li><a href="#blog" class="smoothScroll">BLOG</a></li>
           <li>
@@ -153,7 +107,7 @@ jQuery(document).ready(function ($) {
 </div>
 <p/>
 <div class="row-fluid">
-    <div id="navClear" style="height:200px;width:100%;float:left;color:white">
+    <div id="navClear" style="height:150px;width:100%;float:left;color:white">
       <a name="services" class="smoothScroll"></a>
       <br/>
       <br/>
@@ -189,44 +143,17 @@ jQuery(document).ready(function ($) {
   </div>
 </div>
 <br/>
-<div class="row-fluid">
-      <div class="offset2-5 span4 text-center header">
-        <h1>HOVER TEXT</h1>
-      </div>
-      <div class="span4 text-center header">
-        <h1>HOVER TEXT</h1>
-      </div>
-      <div class="span4 text-center header">
-        <h1>HOVER TEXT</h1>
-      </div>
-  <br/>
-  <br/>
-  <div class="row-fluid">
-    <div id="navClear" class="span4"></div>
-    <div id="navGrey" class="span4">
-      <a href="about.html"><h2>READ MORE</h2></a>
-    </div>
-    <div id="navClear" class="span4"></div>  
-  </div>
-</div>
-<br/>
+
 
 <div class="row-fluid">
-  <div class="span12" style="height:250px;width:100%;float:left;color:white">
+  <div class="span12" style="height:200px;width:100%;float:left;color:white">
   <a name="portfolio" class="smoothScroll"></a>
   <br/>
   <br/>
   <br/>
   <h1 id="navClear"><div>PORTFOLIO</div></h1> 
-
-    <div id="navGrey" class="span4">
-      <a href="about.html"><h2>READ MORE</h2></a>
-    </div>
-
-
   </div>
 </div>
-<br/>
     <div style="width:70%;margin-left:auto;margin-right:auto;">
       <section>
         <ul id="da-thumbs" class="da-thumbs">
@@ -283,18 +210,15 @@ jQuery(document).ready(function ($) {
   </div>
 </div>
 <br/>
-
-<!-- <h1>Phlilosphy/Process</h1> -->
-
 <div id="slider" style="position: relative; z-index: 1;">
   <a class="control_next">></a>
   <a class="control_prev"><</a>
   <ul>
     <li><img src='/assets/philosophy.png'></li>
-    <li style="background: #fff;"><img src='/assets/healthcare_specialty.png'></li>
+    <li><img src='/assets/healthcare_specialty.png'></li>
     <li><img src='/assets/home_healthcare.png'></li>
-    <li style="background: #aaa;"><img src='/assets/senior_living.png'></li>
-    <li style="background: #aaa;"><img src='/assets/stewardship.png'></li>
+    <li><img src='/assets/senior_living.png'></li>
+    <li><img src='/assets/stewardship.png'></li>
   </ul>  
 </div>
 
@@ -493,6 +417,6 @@ jQuery(document).ready(function ($) {
 
       });
     </script>
-
+</section>
 </body>
 </html>
