@@ -91,7 +91,9 @@ figcaption, h1, h2, h3, h4 {
   position: relative;
 }
 
-
+#bkgdTransparent {
+  background-color:rgba(255,147,30,0.5);
+}
 
 /* very simple slider http://codepen.io/zuraizm/pen/vGDHl 
 
