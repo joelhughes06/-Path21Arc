@@ -6,6 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   
   <title>Path21</title>
+
+  <!--lightbox -->
+  <script src='javascripts/jquery-1.11.0.min.js'></script>
+  <script src='javascripts/lightbox.min.js'></script>
+  <link href='assets/lightbox.css' rel='stylesheet' type='text/css'/>
   
   <link rel='stylesheet' href='assets/bootstrap.css' type='text/css'/>
   <link href="//fonts.googleapis.com/css?family=Cabin:bold" rel="stylesheet" type="text/css" >
@@ -22,10 +27,7 @@
 
   <script src="javascripts/parallax.js"></script>
   <script src="javascripts/slider.js"></script>
-<!--lightbox -->
-  <script src='javascripts/jquery-1.11.0.min.js'></script>
-  <script src='javascripts/lightbox.min.js'></script>
-  <link href='assets/lightbox.css' rel='stylesheet' type='text/css'/>
+
 
   <style>
     body {
@@ -81,8 +83,8 @@ $(function() {
     <div id="logo" class="span3">
         <img src='/assets/logo.png' style="height:300px;">
     </div>
-    <div class="text-center span7" style="color:white;padding-top:140px"><strong>"We would all do well to cultivate an attitude of UNITY in architecture."</strong>
-      <!--<img src='/assets/keller_assisted_living_4.png' style="height:300px;padding:25px;" class="center-block">-->
+    <div class="text-center span7" id="logo" style="color:white;padding-top:85px;">
+      <img src='/assets/unity_header_quote1.png' class="center-block">
     </div>
     <div id="top-right-box" class="pull-right">
       <a>
@@ -113,11 +115,11 @@ $(function() {
 <div class="row-fluid">
     <div id="navClear" style="height:150px;width:100%;float:left;color:white">
       <a name="services" class="smoothScroll"></a>
-      <br/>
-      <br/>
       <h1>WHAT WE DO</h1>
     </div>
   <div class="main">
+    <br/>
+    <hr/>    
     <ul class="ch-grid" style="position: relative; z-index: 1;">
       <li>
         <div class="ch-item ch-img-1">
@@ -159,135 +161,75 @@ $(function() {
   </div>
 </div>
     <div style="width:70%;margin-left:auto;margin-right:auto;">
-      <section>
         <ul id="da-thumbs" class="da-thumbs">
-
-          <h4 style='color:white'>Healthcare</h4><hr/>
+          <br/>
+          <hr/>
           <li>
-            <a href="assets/2.jpg" />
-            <img src="/assets/3.jpg" />
-              <div><span>South Austin Hospital</span></div>
+            <a href="assets/las_palmas_medical1.jpg" data-lightbox="healthcare" data-title="Las Palmas Medical Center"/>
+            <img src="/assets/1.jpg" />
+              <div><span>Healthcare</span></div>
             </a>
           </li>
+          <a href="assets/gulf_coast_3.jpg" data-lightbox="healthcare" data-title="Gulf Coast Medical Center"/></a>
+          <a href="assets/south_austin_hospital_1.png" data-lightbox="healthcare" data-title="South Austin Hospital"/></a>
+          <a href="assets/nmscemengencydepartment5.jpg" data-lightbox="healthcare" data-title="North Suburban Medical Center Emergency Department"/></a>
+          <a href="assets/cedan_medical_clinic1.jpg" data-lightbox="healthcare" data-title="Cedan Medical Clinic"/></a>
+          <a href="assets/medical_center_of_aurora1.jpg" data-lightbox="healthcare" data-title="Medical Center of Aurora"/></a>
+          <a href="assets/poudre_valley_hospital_2.png" data-lightbox="healthcare" data-title="Poudre Valley Hospital"/></a>
+          <a href="assets/presbyterian_st_lukes_nicu2.png" data-lightbox="healthcare" data-title="Presbyterian St. Luke's Neonatal Intensive Care Unit"/></a>
+          <a href="assets/saddlerockER1.jpg" data-lightbox="healthcare" data-title="Saddle Rock Emergency Clinic"/></a>
           <li>
-            <a href="assets/2.jpg" />
-            <img src="/assets/7.jpg" />
-              <div><span>Las Palmas Medical Center</span></div>
+            <a href="assets/castlegatecourt2.png" data-lightbox="residential" data-title="Castle Gate Court"/>
+            <img src="/assets/2.png" />
+              <div><span>Residential</span></div>
             </a>
           </li>
+          <a href="assets/doublehitch2.png" data-lightbox="residential" data-title="Double Hitch"/></a>
+          <a href="assets/hollyhock_house2.jpg" data-lightbox="residential" data-title="Hollyhock House"/></a>
+          <a href="assets/beavercreekfairway1.png" data-lightbox="residential" data-title="Fairway Residence at Beaver Creek"/></a>
+          <a href="assets/hernagecreek2.png" data-lightbox="residential" data-title="Hernage Creek Residence"/></a>
+          <a href="assets/hillsidehouse3.png" data-lightbox="residential" data-title="Hillside House"/></a>
+          <a href="assets/junecreek2.png" data-lightbox="residential" data-title="June Creek"/></a>
+          <a href="assets/pianomeadows1.png" data-lightbox="residential" data-title="Piano Meadows House"/></a>
+          <a href="assets/windermererenew1.png" data-lightbox="residential" data-title="Windermere Residence"/></a>
           <li>
-            <a href="assets/2.jpg" />
-            <img src="/assets/9.jpg" />
-              <div><span>Saddle Rock Emergency Room</span></div>
+            <a href="assets/keller_assisted_living_4.png" data-lightbox="senior_living" data-title="Keller Assisted Living" />
+            <img src="/assets/3.png" />
+              <div><span>Senior Living</span></div>
             </a>
           </li>
+            <a href="assets/fountainsassistedliving2.jpg" data-lightbox="senior_living" data-title="Fountains Assisted Living" />
+            <a href="assets/grapevine_hospital1.jpg" data-lightbox="senior_living" data-title="Grapevine Hospital" />
+            <a href="assets/st_pauls_house_1.jpg" data-lightbox="senior_living" data-title="St. Paul's House" />
           <li>
-            <a href="nsmc4.jpeg" data-lightbox="nsmc" data-title="North Suburban Medical Center" />
-            <img src="/assets/nsmc4.jpeg" />
-              <div><span>North Suburban Medical Center</span></div>
-            </a>
-          </li>
-          <li>
-            <a href="assets/2.jpg" />
-            <img src="/assets/9.jpg" />
-              <div><span>Gulf Coast Hospital</span></div>
-            </a>
-          </li>
-          <li>
-            <a href="assets/2.jpg" />
-            <img src="/assets/9.jpg" />
-              <div><span>St. Boniface Hospital</span></div>
-            </a>
-          </li>
-
-          <h4 style='color:white'>Residential</h4><hr/>
-          <h4 style='color:white'>Senior Living</h4><hr/>
-          <h4 style='color:white'>Commercial</h4><hr/>
-          <li>
-            <a href="assets/2.jpg" data-lightbox="comrade" data-title="this is the living room" />
-              <img src="/assets/1.jpg" />
-              <div><span>Hillside House Living Room</span></div>
-            </a>
-          </li>
-
-          <li>
-            <a href="assets/2.jpg" />
-            <img src="/assets/2.jpg" />
-              <div><span>Comrade Brewing Interior</span></div>
-            </a>
-          </li>
-
-          <li>
-            <a href="assets/2.jpg" />
+            <a href="assets/marina_park_1.jpg" data-lightbox="multifamily" data-title="Marina Park Condominiums" />
             <img src="/assets/8.jpg" />
-              <div><span>Jaran Residence Kitchen</span></div>
+              <div><span>Multifamily</span></div>
             </a>
           </li>
-
-
-
+          <a href="assets/lake_dillon_fire_district_housing1.jpg" data-lightbox="multifamily" data-title="Lake Dillon Fire District Housing" />
           <li>
-            <a href="assets/2.jpg" data-lightbox="comrade" data-title="this is the living room" />
-              <img src="/assets/1.jpg" />
-              <div><span>Hillside House Living Room</span></div>
-            </a>
-          </li>          
-          <li>
-            <a href="assets/2.jpg" data-lightbox="comrade" data-title="this is the living room" />
-              <img src="/assets/1.jpg" />
-              <div><span>Hillside House Living Room</span></div>
-            </a>
-          </li>          
-          <li>
-            <a href="assets/2.jpg" data-lightbox="comrade" data-title="this is the living room" />
-              <img src="/assets/1.jpg" />
-              <div><span>Hillside House Living Room</span></div>
-            </a>
-          </li>          
-          <li>
-            <a href="assets/2.jpg" data-lightbox="comrade" data-title="this is the living room" />
-              <img src="/assets/1.jpg" />
-              <div><span>Hillside House Living Room</span></div>
+            <a href="assets/the_clare_at_watertower_1.jpg" data-lightbox="commercial" data-title="The Clare at Watertower" />
+            <img src="/assets/9.jpg" />
+              <div><span>Commercial</span></div>
             </a>
           </li>
+          <a href="assets/comrade_brewing1.png" data-lightbox="commercial" data-title="Comrade Brewing Company" />
+          <a href="assets/monarch_club_and_spa3.png" data-lightbox="commercial" data-title="Monarch Club and Spa" />           
           <li>
-            <a href="assets/2.jpg" data-lightbox="comrade" data-title="this is the living room" />
-              <img src="/assets/1.jpg" />
-              <div><span>Hillside House Living Room</span></div>
-            </a>
-          </li>          
-          <li>
-            <a href="assets/2.jpg" data-lightbox="comrade" data-title="this is the living room" />
-              <img src="/assets/1.jpg" />
-              <div><span>Hillside House Living Room</span></div>
+            <a href="assets/hillsidehouse9.png" data-lightbox="interiors" data-title="Hillside House Living Room" />
+              <img src="/assets/10.jpg" />
+              <div><span>Interiors</span></div>
             </a>
           </li>
-          <li>
-            <a href="assets/2.jpg" data-lightbox="comrade" data-title="this is the living room" />
-              <img src="/assets/1.jpg" />
-              <div><span>Hillside House Living Room</span></div>
-            </a>
-          </li>
-          <li>
-            <a href="assets/2.jpg" data-lightbox="comrade" data-title="this is the living room" />
-              <img src="/assets/1.jpg" />
-              <div><span>Hillside House Living Room</span></div>
-            </a>
-          </li>          
-          <li>
-            <a href="assets/2.jpg" data-lightbox="comrade" data-title="this is the living room" />
-              <img src="/assets/1.jpg" />
-              <div><span>Hillside House Living Room</span></div>
-            </a>
-          </li>
-
-
-
-
+            <a href="assets/hillsidehouse6.png" data-lightbox="interiors" data-title="Hillside House Reading Room" />
+            <a href="assets/monarch_club_and_spa1.png" data-lightbox="interiors" data-title="Monarch Club and Spa" />
+            <a href="assets/hollyhock_house6.jpg" data-lightbox="interiors" data-title="Hollyhock House Living Room" />
+            <a href="assets/jaran_residence_1.jpg" data-lightbox="interiors" data-title="Jaran Residence Kitchen" />
+            <a href="assets/south_austin_hospital_2.png" data-lightbox="interiors" data-title="South Austin Hospital Reception Area" />
+            <a href="assets/windermererenew2.png" data-lightbox="interiors" data-title="Windermere Residence Open Living Room and Kitchen" />
         </ul>
-      </section>
     </div>
-
 
 <br/>
 <br/>
@@ -302,6 +244,7 @@ $(function() {
 </div>
 <br/>
 <div id="slider" style="position: relative; z-index: 1;">
+  <br/>
   <a class="control_next">></a>
   <a class="control_prev"><</a>
   <ul>
@@ -352,15 +295,13 @@ $(function() {
     <a name="team" class="smoothScroll" href="team.html">
       <br/>
       <br/>
-      <br/>
     <h1 id="navClear">
       <div style="color:white">TEAM</div>
     </h1>
     </a>
       <br/>
-      <br/>
       <div class='row-fluid'>
-        <div style="width:65%;margin-left:auto;margin-right:auto;">
+        <div style="width:65%;margin-left:auto;margin-right:auto;font-size:16px">
           <figure style="width: 240px; height: 250px; float: left; margin-right: 20px;margin-bottom: 10px;">
             <img src="/assets/team_jim_jose.jpg" style="width: 240px; height: 235px;">
             <figcaption>
@@ -403,7 +344,7 @@ $(function() {
               <p>Emily combines professionalism and dedication to design excellence on every project, along with a genuine caring for each client and their requirements.</p>
             </figcaption>
           </figure>                                                  
-        </div>
+        </font></div>
       </div>
 
 
@@ -457,8 +398,8 @@ $(function() {
             <tr>
             <p><strong><h3><%= post.title %></h3></strong></p>
             <img src='/assets/<%= post.image %>' style='height: 300px' >
-            <p><span class='quiet'><small><%= display_datetime(post.created_at) %></small></span></p>
-            <p><%= post.description %></p><br/>
+            <p><span style="font-size:13px;" class='quiet; pull-right'><small><%= display_datetime(post.created_at) %></small></span></p><br/>
+            <p style="font-size:14px"><%= post.description %></p><br/>
             </tr>
             <%= link_to vote_post_path(post, vote: true), method: 'post' do %>
               <%= image_tag('/assets/like.png') %>
@@ -466,7 +407,7 @@ $(function() {
               <!-- <i class='icon-arrow-up'></i> -->
             <!-- link_to image_tag('/assets/like.png', :action => :record_a_vote, :method => :post) -->
             <!-- render 'votes/form' -->
-            <%= Vote.count(params[:post_id]) %>
+            <!-- Vote.count(params[:post_id]) -->
             <span class='pull-right'><%= link_to image_tag('/assets/comment_bubble.png'), new_post_comment_path(post)%></span>
 <!--            <h4>Comments:</h4>   -->
             <% post.comments.each do |x| %>

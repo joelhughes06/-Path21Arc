@@ -464,17 +464,17 @@ textarea {
   }
 }
 
-
-
-
-
+/* I added this below */
+@font-face { font-family: SF New Republic; src: url('http://www.mediafont.com/storage/contents/7114/font.eot'); /* IE */ 
+src: local('SF New Republic'), url('http://www.mediafont.com/storage/contents/7114/SF New Republic.ttf'); /* non-IE */ 
+}
 
 
 
 body {
    background-color: #eee;  
    color: #999;
-   font: 20px/1.0em "Lato", sans-serif; /* "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+   font: 30px/1.0em "SF New Republic", sans-serif; /* "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif; */
    /* font-weight:bold; */
 }
 #wrap {
@@ -555,7 +555,9 @@ body {
 br.clearLeft {
    clear: left;        
 }​
-
+#folio {
+  font-size: 12px;
+}
 
 
 /* from http://webdevrefinery.com/forums/topic/12425-horizontal-scrolling-div-with-all-dynamic-widths/ */

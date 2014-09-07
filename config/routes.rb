@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   resources :inquiries, :only => [:new, :create] do
     get 'thank_you', :on => :collection
   end
+
+  resources :galleries
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
