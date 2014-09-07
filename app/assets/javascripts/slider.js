@@ -45,4 +45,4 @@ jQuery(document).ready(function ($) {
         moveRight();
     });
 
-})    
+});    
