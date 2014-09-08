@@ -114,8 +114,8 @@
         self.end();
         return false;
       });
-    };
-) //i added this close parenthesis per http: www.javascriptlint.com/online_lint.php
+    });
+ //i added the above close parenthesis per http: www.javascriptlint.com/online_lint.php
     // Show overlay and lightbox. If the image is part of a set, add siblings to album array.
     Lightbox.prototype.start = function($link) {
       var self    = this;
