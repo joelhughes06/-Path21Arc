@@ -408,4 +408,5 @@
     var lightbox = new Lightbox(options);
   });
 
-}).call(this);
+).call(this);
+// above line began with } but www.javascriptlint.com online_lint.php says that is a syntax error
