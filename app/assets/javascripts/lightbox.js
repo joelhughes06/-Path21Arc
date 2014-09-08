@@ -53,12 +53,12 @@
         return false;
       });
     };
-// I deleted out this whole section -- this was causing the duplicate prev.png next.png lb-image and loading.gif at bottom of page
+// I deleted out the whole section below
     // Build html for the lightbox and the overlay.
     // Attach event handlers to the new DOM elements. click click click
-    // Lightbox.prototype.build = function() {
-    //  var self = this;
-    //  $("<div id='lightboxOverlay' class='lightboxOverlay'></div><div id='lightbox' class='lightbox'><div class='lb-outerContainer'><div class='lb-container'><img class='lb-image' src='' /><div class='lb-nav'><a class='lb-prev' href='' ></a><a class='lb-next' href='' ></a></div><div class='lb-loader'><a class='lb-cancel'></a></div></div></div><div class='lb-dataContainer'><div class='lb-data'><div class='lb-details'><span class='lb-caption'></span><span class='lb-number'></span></div><div class='lb-closeContainer'><a class='lb-close'></a></div></div></div></div>").appendTo($('body'));
+//    Lightbox.prototype.build = function() {
+//      var self = this;
+//      $("<div id='lightboxOverlay' class='lightboxOverlay'></div><div id='lightbox' class='lightbox'><div class='lb-outerContainer'><div class='lb-container'><img class='lb-image' src='' /><div class='lb-nav'><a class='lb-prev' href='' ></a><a class='lb-next' href='' ></a></div><div class='lb-loader'><a class='lb-cancel'></a></div></div></div><div class='lb-dataContainer'><div class='lb-data'><div class='lb-details'><span class='lb-caption'></span><span class='lb-number'></span></div><div class='lb-closeContainer'><a class='lb-close'></a></div></div></div></div>").appendTo($('body'));
       
       // Cache jQuery objects
       this.$lightbox       = $('#lightbox');
@@ -114,8 +114,8 @@
         self.end();
         return false;
       });
-    });
- //i added the above close parenthesis per http: www.javascriptlint.com/online_lint.php
+    };
+
     // Show overlay and lightbox. If the image is part of a set, add siblings to album array.
     Lightbox.prototype.start = function($link) {
       var self    = this;
@@ -408,5 +408,4 @@
     var lightbox = new Lightbox(options);
   });
 
-).call(this);
-// above line began with } but www.javascriptlint.com online_lint.php says that is a syntax error
+}).call(this);
