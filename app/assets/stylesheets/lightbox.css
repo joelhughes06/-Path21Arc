@@ -42,7 +42,7 @@ body:after {
 
 .lb-outerContainer {
   position: relative;
-  background-color: white;
+  background-color: none; /* was white */
   *zoom: 1;
   width: 250px;
   height: 250px;
@@ -76,8 +76,8 @@ body:after {
 
 .lb-cancel {
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 128px; /* was 32px */
+  height: 128px; /* was 32px */
   margin: 0 auto;
   background: url('/assets/loading.gif') no-repeat;
 }
