@@ -417,11 +417,11 @@ $(function() {
               <!-- <i class='icon-arrow-up'></i> -->
             <!-- link_to image_tag('/assets/like.png', :action => :record_a_vote, :method => :post) -->
             <!-- render 'votes/form' -->
-            <!-- Vote.count(params[:post_id]) -->
+            <small style="font-size:18px"><%= Vote.count(params[:post_id]) %></small>
             <span class='pull-right'><%= link_to image_tag('/assets/comment_bubble.png'), new_post_comment_path(post)%></span>
-<!--            <h4>Comments:</h4>   -->
+            <h6>Comments:</h6>
             <% post.comments.each do |x| %>
-            <p>"<%= x.comment %>"</p><small> by <%= x.commenter %><span class='quiet; pull-right'><%= display_datetime(x.created_at)%></span></small>
+            <p style="font-size:14px">"<%= x.comment %>"</p><p style="font-size:14px"> by <%= x.commentator %><span class='quiet; pull-right'><small><%= display_datetime(x.created_at)%></small></span></p>
             <br/>
             <% end %>
             <div class="separator-grey"></div>
