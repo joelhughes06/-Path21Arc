@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
 
 	def create
 		@post = Post.find(params[:post_id])
-		@comment = Comment.new(params.require(:comment).permit!)
+		@comment = Comment.new(params.require(:comment).permit(:commentator, :email, :ip, :post_id, :comment))
 		@comment.post = @post
 		@ip = request.remote_ip
 		@comment.ip = @ip
