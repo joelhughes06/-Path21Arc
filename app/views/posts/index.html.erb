@@ -356,7 +356,7 @@ $(function() {
             <%= link_to vote_post_path(post, vote: true), method: 'post' do %>
               <%= image_tag('/assets/like.png') %>
               <% end %>
-            <small style="font-size:18px"><%= Vote.count(params[:post_id]) %></small>
+            <small style="font-size:18px"><!-- Vote.count(params[:post_id]) --></small>
             <span class='pull-right'><%= link_to image_tag('/assets/comment_bubble.png'), new_post_comment_path(post)%></span>
             <h6>Comments:</h6>
             <% post.comments.each do |x| %>
