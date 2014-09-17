@@ -2,13 +2,13 @@ class CommentsController < ApplicationController
 
 	def create
 		@post = Post.find(params[:post_id])
-		@comment = Comment.new(params.require(:comment).permit!)
+		@comment = Comment.new(params.require(:comment).permit(:commentator, :email, :ip, :post_id, :comment))
 		@comment.post = @post
 		@ip = request.remote_ip
 		@comment.ip = @ip
-		respond_to do |format|
-  	format.html { render layout: !request.xhr? }
-  	end
+#		respond_to do |format|
+#  	format.html { render layout: !request.xhr? }
+#  	end
 		if @comment.save
 			flash[:success] = "Thanks, your comment will appear shortly."
 			redirect_to root_path

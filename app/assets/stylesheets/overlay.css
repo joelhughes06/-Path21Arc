@@ -1,0 +1,93 @@
+/* www.corelangs.com/css/box/fulloverlay.html */
+
+  #cover{ 
+    position:fixed; 
+    top:0; 
+    left:0; 
+    background:rgba(0,0,0,0.8); 
+    z-index:5; 
+    width:100%; 
+    height:100%; 
+    display:none;     
+  } 
+  #covertwo{ 
+    position:fixed; 
+    top:0; 
+    left:0; 
+    background:rgba(0,0,0,0.8); 
+    z-index:5; 
+    width:100%; 
+    height:100%; 
+    display:none; 
+  }   
+  #coverthree{ 
+    position:fixed; 
+    top:0; 
+    left:0; 
+    background:rgba(0,0,0,0.8); 
+    z-index:5; 
+    width:100%; 
+    height:100%; 
+    display:none;  
+  } 
+  #architectureScreen 
+  { 
+    height:500px; 
+    width:800px; 
+    margin:0 auto; 
+    position:relative; 
+    z-index:10; 
+    display:none; 
+    background: url('/assets/architecture_text.png') no-repeat; 
+    /* border:5px solid #cccccc; */ 
+    border-radius:10px;
+  } 
+  #architectureScreen:target, #architectureScreen:target + #cover{ 
+    display:block; opacity:2; 
+  } 
+  #planningScreen 
+  { 
+    height:500px; 
+    width:800px; 
+    margin:0 auto;
+    position:relative; 
+    z-index:10; 
+    display:none; 
+    background: url('/assets/planning_text.png') no-repeat; 
+    /* border:5px solid #cccccc; */ 
+    border-radius:10px;
+  } 
+  #planningScreen:target, #planningScreen:target + #covertwo{ 
+    display:block; opacity:2; 
+  } 
+  #outreachScreen 
+  { 
+    height:500px; 
+    width:800px; 
+    margin:0 auto; 
+    position:relative; 
+    z-index:10; 
+    display:none; 
+    background: url('/assets/outreach_text.png') no-repeat; 
+    /* border:5px solid #cccccc; */ 
+    border-radius:10px;
+  } 
+  #outreachScreen:target, #outreachScreen:target + #coverthree{ 
+    display:block; opacity:2; 
+  } 
+
+  .cancel 
+  { 
+    display:block; 
+    position:absolute; 
+    top:3px; 
+    right:2px; 
+    /* background:rgb(245,245,245); */ 
+    color:white; height:30px; /* was black */
+    width:35px; 
+    font-size:30px; 
+    text-decoration:none; 
+    text-align:center; 
+    font-weight:bold; 
+  } 
+ 

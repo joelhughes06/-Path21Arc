@@ -13,13 +13,13 @@ class PostsController < ApplicationController
 	end
 
 	def create 
-		@post = Post.new[params.require(:post).permit!]
+		@post = Post.new[params.require(:post).permit(:title, :description, :author, :email, :ip, :image)]
 		@ip = request.remote_ip
 #		@post.ip = @ip		
 		if @post.save 
 #			&& user_lookup
 			flash[:notice] = "Thanks for your comment! It will appear shortly."
-			redirect_to_root_path
+			redirect_to root_path
 		else
 			render 'new'
 		end
@@ -32,7 +32,7 @@ class PostsController < ApplicationController
 	end
 
 	def record_a_vote  
-		@vote = Vote.new[params.require(:voter_ip).permit!]
+		@vote = Vote.new[params.require(:vote).permit(:voter_ip, :post_id, :voter_email)]
 	  @post = Post.find[params(:post_id)]
 	  @vote_id = params[:vote_id]  
 	  @voter_ip = request.remote_ip  
@@ -50,8 +50,10 @@ class PostsController < ApplicationController
 	end 	
 
 	def vote
-		Vote.create(params[:post_id])
-		render :text => "Thanks for voting"
+		Vote.create(post: Post.find(params[:id]))
+		flash[:success] = "Thanks for your vote!"
+		redirect_to root_path
+#		render :text => "Thanks for voting"
 	end
 
 	def set_post

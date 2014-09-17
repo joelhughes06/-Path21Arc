@@ -1,0 +1,19 @@
+<%=	 render 'shared/top_menu' %>
+
+<%= @gallery.order("data-lightbox desc").each do |g| %>
+
+<a href="img/<%= g.photo %>" data-lightbox="<%= g.group %>" data-title="<%= g.caption %>">Image #1</a>
+
+<% end %>
+
+
+<img src='/assets/<%= g.image %>' style='height: 300px' >
+
+<a href='img/image-1.jpg' data-lightbox="image-1" data-title="My caption">Image #1</a>
+
+
+<a href='img/image-2.jpg' data-lightbox="roadtrip" data-title="A pic of me">Image #1</a>
+
+<a href='img/image-3.jpg' data-lightbox="roadtrip" data-title="A pic of someone else">Image #3</a>
+
+<a href='img/image-4.jpg' data-lightbox="roadtrip" data-title="A pic of yet another">Image #4</a>
