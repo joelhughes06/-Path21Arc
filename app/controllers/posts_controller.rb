@@ -50,7 +50,7 @@ class PostsController < ApplicationController
 	end 	
 
 	def vote
-		Vote.create(params[:post_id])
+		Vote.create(post: Post.find(params[:id]))
 		flash[:success] = "Thanks for your vote!"
 		redirect_to root_path
 #		render :text => "Thanks for voting"
